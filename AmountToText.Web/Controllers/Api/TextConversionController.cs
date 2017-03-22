@@ -1,9 +1,11 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 using AmountToText.Service;
 using AmountToText.Web.Models;
 
 namespace AmountToText.Web.Controllers.Api
 {
+    [EnableCors("*", "*", "*")]
     [RoutePrefix("api/TextConversion")]
     public class TextConversionController : ApiController
     {
